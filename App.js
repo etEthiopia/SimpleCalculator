@@ -62,13 +62,18 @@ export default class App extends Component {
 
   render() {
     let rows = [];
-    
+    let nums = [
+      [7, 8, 9],
+      [4, 5, 6],
+      [1, 2, 3],
+      [".", 0, "="]
+    ];
     for (let i = 0; i < 4; i++) {
       let row = [];
       for (let j = 0; j < 3; j++) {
         row.push(
           <TouchableOpacity style={styles.keypads}>
-            <Text style={styles.textButtons}>{i + 1}</Text>
+            <Text style={styles.textButtons}>{nums[i][j]}</Text>
           </TouchableOpacity>
         );
       }
